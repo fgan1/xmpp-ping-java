@@ -14,6 +14,10 @@ Install maven
 ```bash
 apt-get install maven
 ```
+Install git
+```bash
+apt-get install git
+```
 
 ## Instalation
 ```bash
