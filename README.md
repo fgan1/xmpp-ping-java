@@ -6,13 +6,20 @@ Small application create to check connectivity between two components XMPP.
 ## Pre Requirements
 
 Install Java
+```bash
+apt-get install openjdk-8-jdk
+```
 
 Install maven
+```bash
+apt-get install maven
+```
 
 ## Instalation
-
-mvn isntall
-
+```bash
+cd xmpp-ping-java
+mvn install
+```
 ## Configuration
 
 Create the "configuration.properties" using the example "configuration.properties.example"
@@ -34,8 +41,10 @@ log4j.appender.file.File=xmpp-ping.log
 ```
 
 ## Run
+```
 cd {xmpp-ping-java}/bin
 bash start-ping
+```
 
 ## Check
 Open the file log and verify if the ping is ok or not. 
