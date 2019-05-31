@@ -1,8 +1,14 @@
+# Send ping from this component
 xmpp_own_component_jid=
+# component password
 xmpp_own_component_password=
+# xmpp address
 xmpp_server_ip=
+# xmpp address
+# default: 5347
 xmpp_server_port=
 
+# Send ping to this component
 xmpp_component_to_ping=
 
-period_to_ping=
+period_to_ping=2000
