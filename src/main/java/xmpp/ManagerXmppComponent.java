@@ -39,13 +39,13 @@ public class ManagerXmppComponent extends XMPPComponent implements AsyncPacketSe
 		iq.getElement().addElement(QUERY_XMPP_PARAMETER, ManagerXmppComponent.PING_NAMESPACE);
 
 		IQ response = (IQ) packetSender.syncSendPacket(iq);
-		PacketError errorOnResponse = response != null ? response.getError() :  null;
+		PacketError errorOnResponse = response != null ? response.getError() : null;
 		if (response == null || errorOnResponse != null) {
-			LOGGER.info("Ping not ok.");
+			LOGGER.info(String.format("Ping to %s not ok.", address));
 			LOGGER.error("Error while received the ping response: " + errorOnResponse.getText());
 			return;
 		}
-		LOGGER.info("Ping ok");
+		LOGGER.info(String.format("Ping to %s ok.", address));
 	}
 
 	private void schedulePing(final long period, final String address, final PacketSender packetSender) {		

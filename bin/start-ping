@@ -9,5 +9,4 @@ else
 CONF_LOG=
 fi
 
-java $CONF_LOG -cp target/xmpp-ping-0.0.1-SNAPSHOT.jar:target/lib/* Main configuration.properties > /dev/null &
-tail -f xmpp-ping.log
+java $CONF_LOG -cp target/xmpp-ping-0.0.1-SNAPSHOT.jar:target/lib/* Main configuration.properties > /dev/null
