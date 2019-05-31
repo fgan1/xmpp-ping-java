@@ -1,7 +1,6 @@
 configuration.properties
 log4j.conf
 
-bin/
 target/
 
 .project

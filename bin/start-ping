@@ -1,0 +1,13 @@
+#!/bin/bash
+DIRNAME=`dirname $0`
+cd $DIRNAME/..
+
+LOG4J=log4j.conf
+if [ -f $LOG4J ]; then
+CONF_LOG=-Dlog4j.configuration=file:$LOG4J
+else
+CONF_LOG=
+fi
+
+java $CONF_LOG -cp target/xmpp-ping-0.0.1-SNAPSHOT.jar:target/lib/* Main configuration.properties > /dev/null &
+tail -f xmpp-ping.log
